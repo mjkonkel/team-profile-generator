@@ -4,8 +4,9 @@ const fs = require('fs');
 const generatePage = require('./src/page-template')
 const Manager = require('./lib/Manager')
 const team = []
+
 // array of questions for inquirer
-const questions = [
+const managerQuestion = [
     {
         type: 'input',
         name: 'managerName',
@@ -43,7 +44,7 @@ function writeToFile() {
 // function to initialize app
 function init() {
     inquirer
-        .prompt(questions)
+        .prompt(managerQuestion)
         .then((data) => {
             const manager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerOffice)
             team.push(manager)
