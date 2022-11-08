@@ -1,0 +1,21 @@
+.card {
+    width: fit-content;
+    margin: 10px;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none
+}

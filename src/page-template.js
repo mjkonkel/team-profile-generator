@@ -1,7 +1,7 @@
 
 function generatePage(data) {
-    return
-    `
+    const manager = data[0]
+    return `
     <!DOCTYPE html>
     <html>
     <head>
@@ -11,21 +11,24 @@ function generatePage(data) {
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     </head>
-    <header></header>
+    <header class="bg-danger header text-white"><h1>My Team</h1></header>
+    
     <body>
-    <h1>My Team</h1>
-    <h1>${(data.managerName)}</h1>
-    <section>
-        <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">${(data.managerName)}</h5>
-            <p class="card-text">Som</p>
-
-        </div>
-
-        </div>
-    </section>
+        <section class="section">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title ">${(manager.name)}</h5>
+                </div>
+                <ul>
+                    <li class="card-text">${(manager.id)}</li>
+                    <li class="card-text">${(manager.email)}</li>
+                    <li class="card-text">${(manager.officeNum)}</li>
+                </ul>
+            </div>
+            
+        </section>
     </body>
+
     </html>
     `
 }

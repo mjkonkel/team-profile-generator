@@ -89,10 +89,11 @@ const internQuestion = [
 
 // function to write the html file
 function writeToFile() {
+    console.log(team)
     fs.writeFileSync('./dist/team.html', generatePage(team))
 }
 
-// function to initialize app
+// function to initialize app and show manager questions
 function init() {
     inquirer
         .prompt(managerQuestion)
@@ -103,6 +104,7 @@ function init() {
         }).then(() => menu())
 }
 
+// function for menu question
 function menu() {
     inquirer
         .prompt(menuQuestion)
@@ -117,12 +119,13 @@ function menu() {
             }
             // if user selects no more team members - end inquirer and writeToFile()
             if (data.employeeType === "I don't want to add any more team members") {
-                // writeToFile()
+                writeToFile()
                 console.log(team)
             }
         })
 }
 
+// function to show engineer questions
 function engineer() {
     inquirer
         .prompt(engineerQuestion)
@@ -132,6 +135,7 @@ function engineer() {
         }).then(() => menu())
 }
 
+// function to show intern questions
 function intern() {
     inquirer
         .prompt(internQuestion)
