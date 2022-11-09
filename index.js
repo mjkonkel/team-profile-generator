@@ -89,7 +89,6 @@ const internQuestion = [
 
 // function to write the html file
 function writeToFile() {
-    console.log(team)
     fs.writeFileSync('./dist/team.html', generatePage(team))
 }
 
@@ -100,7 +99,6 @@ function init() {
         .then((data) => {
             const manager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerOffice)
             team.push(manager)
-            // console.log(team)
         }).then(() => menu())
 }
 
@@ -120,7 +118,6 @@ function menu() {
             // if user selects no more team members - end inquirer and writeToFile()
             if (data.employeeType === "I don't want to add any more team members") {
                 writeToFile()
-                console.log(team)
             }
         })
 }

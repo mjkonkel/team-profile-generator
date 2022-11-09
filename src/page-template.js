@@ -20,9 +20,9 @@ function generatePage(data) {
                     <h5 class="card-title ">${(manager.name)}</h5>
                 </div>
                 <ul>
-                    <li class="card-text">${(manager.id)}</li>
-                    <li class="card-text">${(manager.email)}</li>
-                    <li class="card-text">${(manager.officeNum)}</li>
+                    <li class="card-text">ID: ${(manager.id)}</li>
+                    <li class="card-text">Email: ${(manager.email)}</li>
+                    <li class="card-text">Office: ${(manager.officeNum)}</li>
                 </ul>
             </div>
             
