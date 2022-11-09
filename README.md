@@ -7,10 +7,10 @@ This repo contains code for Challenge 10 of the Bootcamp. In this challenge we n
 This project uses inquirer. Inquirer was installed by running `npm i`
 
 ## Usage
->To use the Team Profile Generator enter `npm run start` into the Command Line. This will have inquirer begin asking the prompts.
+>To use the Team Profile Generator enter `npm run start` into the Command Line. This will have inquirer begin asking the prompts. <br>
 ![npm run start](./images/start.JPG)
 
->To run the tests enter `npm run test` into the Command Line. This will run the tests on the Employee classes.
+>To run the tests enter `npm run test` into the Command Line. This will run the tests on the Employee classes. <br>
 ![npm run test](./images/test.JPG)
 
 ## License
